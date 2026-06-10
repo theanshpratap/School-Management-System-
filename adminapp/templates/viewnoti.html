@@ -1,0 +1,33 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-8 mx-auto">
+        <h1 class="text-center">VIEW NOTIFICATIONS</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>Title</th>
+                <th>Upload File</th>
+                <th>File Name</th>
+            </tr>
+            {% for n in noti %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{n.text}}</td>
+                <td>{{n.doc}}</td>
+                <!-- <td>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </td> -->
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

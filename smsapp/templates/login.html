@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<style>
+
+    .bg-img {
+        background: url('../static/images/ab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 220px;
+
+    }
+
+
+.button {
+  padding: 8px 15px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+<!-- About img start -->
+<div class="row bg-img">
+    <div class="col-sm-12">
+        <div class="col-sm-10  mx-auto px-3 py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Login</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 117, 210); color: white;"><b>LOGIN TO
+                            YOUR SCHOOL</b></span></span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- About img start -->
+
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+<!-- main start -->
+<div class="row py-5 " style="background-color: rgb(23,23,50);">
+    <div class="col-md-4 mx-auto">
+        <div class="card p-3">
+            <main class="form-signin w-100 m-auto">
+                <form method="post" action="{% url 'logcode' %}">
+                    {% csrf_token %}
+                    <div class="text-center">
+                        <!-- <span><i class="fa-solid fa-users fa-3x "></i></span> -->
+                    </div>
+                    <!-- <h1 class="h3 mb-3 fw-normal text-center">Welcome Login User</h1> -->
+                     <p class="text-center"><img src="{% static 'images/user.png' %}" alt="" width="100"></p>
+                    <h3 class="text-center">Welcome User</h3>
+                    {% if msg %}
+                    <div class="alert alert-danger" role="alert">{{msg}}</div>
+                    {% endif %}
+                    <div class="form-floating">
+                        <select class="form-select" id="utype" name="usertype" required>
+                            <option value="">Select User Type</option>
+                            <option value="admin">Admin</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                        </select>
+                        <label for="utype">Select User</label>
+                    </div>
+                    <div class="form-floating my-2">
+                        <input name="userid" type="text" class="form-control" id="uid" placeholder="Enter UserId">
+                        <label for="uid">Enter User Id</label>
+                    </div>
+                    <div class="form-floating">
+                        <input name="password" type="password" class="form-control" id="floatingPassword"
+                            placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <p class="mt-2"><button class="button w-100" type="submit">Log in</button></p>
+
+                </form>
+            </main>
+        </div>
+
+
+    </div>
+
+</div>
+
+<!-- main end -->
+
+{% endblock %}

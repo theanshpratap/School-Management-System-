@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+    .shadw {
+        box-shadow: 10px 10px 5px rgb(66, 93, 156);
+    }
+</style>
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Founder's Message</a>
+            </span>
+            <h1><span><span style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);  "><b>FOUNDER'S
+                            MESSAGE</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+
+<!-- founder's start -->
+
+<!-- founder;s end -->
+<!-- sec 2 start -->
+<div class="row  py-5 text-white" style="background-color: rgb(23, 23, 50);">
+    <div class="col-sm-9 mx-auto px-4">
+        <div class="row  p-3">
+            <div class="col-sm-3">
+                <div class="card shadw">
+                    <img src="{% static 'images/about/founder1.jpg' %}" class="card-img-top w-100  p-1" alt="error"
+                        height="auto">
+
+                </div>
+                <p class="text-center mt-3">
+                    <strong><span style="font-size: 20px; color: #52a1ea;">Shri Sadhu Ram Ji</span></strong>
+                    <br>
+                    <span style="font-size: 17px; ">Founder</span>
+                </p>
+
+            </div>
+
+            <div class="col-sm-6 text-white">
+                <p
+                    style="font-weight: 900px; font-size: 25px; padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">
+                    Dear Parents, Guardians and Students,</p>
+                <p style="text-align: justify;"><span style="font-size: 17px;">The journey of
+                        Seth Anandram Jaipuria School begins with a profound commitment to bridge the gap in
+                        educational access and quality that persists in rural areas. Having grown up in a
+                        similar environment, I understand first-hand the challenges faced by students who aspire
+                        for a modern and English-based education but lack the means to pursue it. <br>
+                        It is this very understanding that has fuelled our mission to establish a school that not only imparts
+                        knowledge but also nurtures dreams. Our curriculum is meticulously designed to blend
+                        traditional values with contemporary teaching methodologies, ensuring that every student
+                        receives a holistic education that prepares them for success in the 21st century.</span>
+                </p>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card shadw">
+                    <img src="{% static 'images/about/founder2.jpg' %}" class="card-img-top w-100 p-1" alt="error">
+
+                </div>
+                <p class="text-center mt-3">
+                    <strong><span style="font-size: 20px; color:#52a1ea;">Smt. Sushmawati Ji</span></strong>
+                    <br>
+                    <span style="font-size: 17px;">Founder</span>
+                </p>
+
+            </div>
+
+        </div>
+        <ul>
+            <li>
+                <p style="text-align: justify;"><span style="font-size: 17px; ">The journey of
+                        Seth Anandram Jaipuria School begins with a profound commitment to bridge the gap in
+                        educational access and quality that persists in rural areas. Having grown up in a
+                        similar environment, I understand first-hand the challenges faced by students who aspire
+                        for a modern and English-based education but lack the means to pursue it.</span></p>
+            </li>
+            <li>
+                <p style="text-align: justify;"><span style="font-size: 17px; ">It is this very
+                        understanding that has fuelled our mission to establish a school that not only imparts
+                        knowledge but also nurtures dreams. Our curriculum is meticulously designed to blend
+                        traditional values with contemporary teaching methodologies, ensuring that every student
+                        receives a holistic education that prepares them for success in the 21st century.</span>
+                </p>
+            </li>
+            <li>
+                <p style="text-align: justify;"><span style="font-size: 17px; ">At our school, we
+                        envision a learning environment where curiosity is encouraged, critical thinking is fostered,
+                        and creativity is celebrated. Through interactive classrooms, state-of-the-art facilities, and a
+                        dedicated team of educators, we aim to ignite a passion for learning that transcends boundaries
+                        and empowers students to realize their full potential.</span></p>
+            </li>
+            <li>
+                <p style="text-align: justify;"><span style="font-size: 17px; ">As we embark on this
+                        journey together, I invite you to join us in shaping a future where every child has access to
+                        quality education. Together, let us sow the seeds of knowledge, nurture the aspirations of our
+                        youth, and build a brighter tomorrow for generations to come.</span></p>
+            </li>
+            <li>
+                <p style="text-align: justify;"><span style="font-size: 16px;">Thank you for entrusting
+                        us with the education of your children. We look forward to partnering with you in this noble
+                        endeavour.</span></p>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+</div>
+<!-- sec 2 end -->
+
+
+
+
+
+{% endblock %}

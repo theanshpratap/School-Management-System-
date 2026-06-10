@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+
+<style>
+    .bg-image {
+        background: url('../static/images/ab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+
+    .bt {
+        padding: 15px 25px;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #99aa04;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
+
+    .bt:hover {
+        background-color: #3e8e41
+    }
+
+    .bt:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Fee</a>
+            </span>
+            <h1><span><span style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>FEE
+                            STRUCTURE</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- fee stsrt -->
+<div class="row text-center py-5" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-8 mx-auto">
+
+        <p><img width="" height="300" src="{% static 'images/fee.png' %}" alt=""></p>
+    </div>
+    <span style="color: white; font-size: 20px;  font-family: Brush Script Std;">-: <b>Download Fee Structure</b> :-</span>
+    <p class="mt-5">
+        <a href="https://jaipuriaschoolssadhucampusbbk.com/wp-content/uploads/2024/05/Fee-structure-.pdf" title=""
+            target="_blank" class="bt text-decoration-none" style="font-family: Franklin Gothic Medium;">Download Fee Structure 2024-25</a>
+    </p>
+
+</div>
+
+<!-- fee end -->
+
+
+{% endblock %}

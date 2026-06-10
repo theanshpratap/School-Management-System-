@@ -1,0 +1,33 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-8 mx-auto">
+        <h1 class="text-center">ADD NOTIFICATION</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table class="table table-bordered">
+                <tr>
+                    <td>Enter Notification</td>
+                    <td>
+                        <textarea name="text" class="form-control"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload File</td>
+                    <td>
+                        <input type="file" name="doc" class="form-control">
+                    </td>
+                </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            <button type="submit" class="btn btn-success">Add Notification</button>
+                        </td>
+                    </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

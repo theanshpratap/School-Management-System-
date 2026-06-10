@@ -1,0 +1,63 @@
+{% extends 'adminbase.html' %}  
+{% load static %}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <p class="text-center my-3" style="background-color: aquamarine; color: black; font-weight: 700; font-size: 40px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">View Students</p>
+    </div>
+</div>
+
+<table class="table table-bordered text-center">
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Father's Name</th>
+        <th>Mother's Name</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>Contact No</th>
+        <th>Alternate No</th>
+        <th>Email Address</th>
+        <th>Student Class</th>
+        <th>Address</th>
+        <th>Paid Fee</th>
+        <th>Due Fee</th>
+        <th>Added Date</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    {% for s in st %}
+
+    <tr>
+        <td>{{s.rollno}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.fname}}</td>
+        <td>{{s.mname}}</td>
+        <td>{{s.gender}}</td>
+        <td>{{s.dob}}</td>
+        <td>{{s.contactno}}</td>
+        <td>{{s.altrnum}}</td>
+        <td>{{s.emailaddress}}</td>
+        <td>{{s.sclass}}</td>
+        <td>{{s.address}}</td>
+        <td>{{s.feepaid}}</td>
+        <td>{{s.duefees}}</td>
+        <td>{{s.created_date}}</td>
+        
+        <td>
+            <a href="{% url 'adminapp:editstudent' id=s.rollno %}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+        </td>
+        <td>
+            <a href="{% url 'adminapp:delst' id=s.rollno %}" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+            
+        </td>
+    </tr>
+
+
+    {% endfor %}
+</table>
+
+
+
+{% endblock %}

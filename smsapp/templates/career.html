@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<style>
+    .bg-image {
+        background: url('../static/images/ab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+
+    div.slide-left {
+
+        overflow: hidden;
+    }
+
+    div.slide-left .pn {
+        animation: slide-left 5s;
+    }
+
+    @keyframes slide-left {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+    .sld-text {
+        overflow: hidden;
+    }
+
+    .sld-text .ap {
+        animation: slideIn 5s;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row bg-image">
+    <div class="col-sm-12">
+        <div class="col-sm-10  mx-auto px-3 py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Career</a>
+            </span>
+            <h1><span><span
+                        style="border-bottom: 5px solid rgb(24, 117, 210); color: white;"><b>CAREER</b></span></span>
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- main start -->
+<div class="row text-white px-2" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto my-5">
+        <span style="font-weight:700;font-size:32px; padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">Find
+            Your Opportunity</span>
+        <div class="row slide-left mb-5">
+            <p style="font-size: 18px; text-align: justify;" class="pn"><strong>Seth Anandram Jaipuria
+                    School</strong> invites applications for faculty at various levels given below. We are looking
+                for teachers with exposure to the latest teaching-learning tools and pedagogical innovations.
+                Proficiency in computers, communication &amp; linguistic competency in English is essential for all
+                academic positions.</p>
+        </div>
+        <div class="row">
+            <p><span
+                    style="font-size: 30px; font-weight: 800px; color: white; padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">Current
+                    Openings :-</span></p>
+            <div class="col-sm-8 sld-text">
+                <div class="accordion accordion-flush ap" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <span style=" font-family: Georgia, serif; color: rgb(34, 117, 243);">TGT</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman;  font-size: 17px;">English,
+                                    Hindi, Math, Science, SST, Sanskrit, French, German, Computers (Post
+                                    Graduate/Graduate with B.Ed. Minimum 5 years experience)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <span style=" font-family: Georgia, serif; color: rgb(34, 117, 243);">PRT-All
+                                    Subject</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate
+                                    with
+                                    B.Ed. Minimum 3 years experience</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">PRE PRIMARY
+                                    TEACHER</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate
+                                    with
+                                    NTT or B.Ed. with work experience</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">ACADEMIC
+                                    COORDINATOR</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span style="text-align: justify; font-family: Times New Roman; font-size: 17px;">B.Ed.
+                                    with 5
+                                    years of experience in Teaching & Administration</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">PHYSICAL EDU. &
+                                    ACTIVITY
+                                    TEACHERS</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman;  font-size: 17px;">Sports,
+                                    Art &
+                                    Craft, Music & Dance, Librarian Degree / Diploma in respective fields with
+                                    work experience.</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">TRANSPORT IN -
+                                    CHARGE</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate
+                                    with
+                                    relevant experience of 5 years in a reputed school</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseNine" aria-expanded="false"
+                                aria-controls="flush-collapseNine">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">IT EXECUTIVE</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">MCA/BCA
+                                    with
+                                    relevant experience</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTen" aria-expanded="false"
+                                aria-controls="flush-collapseTen">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">ADMISSION
+                                    COUNSELLOR</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate
+                                    with 3
+                                    years of experience in handing enquiries and admissions</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+                                aria-controls="flush-collapseTwelve">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">ACCOUNTANT & SCHOOL
+                                    ADMINISTRATOR</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwelve" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate
+                                    in
+                                    respective fields and prior work experience of 3 -5 years</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThirteen" aria-expanded="false"
+                                aria-controls="flush-collapseThirteen">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">MARKETING
+                                    OFFICER</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThirteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate/MBA
+                                    min. 3-5 yrs. experience</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+                                aria-controls="flush-collapseFourteen">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">RECEPTIONIST /
+                                    FRONT DESK</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFourteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Graduate
+                                    min. 1
+                                    yrs. experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFifteen" aria-expanded="false"
+                                aria-controls="flush-collapseFifteen">
+                                <span style="font-family: Georgia, serif; color: rgb(34, 117, 243);">SALARY WILL BE NO
+                                    BAR FOR DESERVING
+                                    CANDIDATES</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFifteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <span
+                                    style="text-align: justify; font-family: Times New Roman; font-size: 17px;">Interested
+                                    candidates can apply within 7 days by sending the resume on email (given
+                                    below) with position and Outstation candidates are preferred and
+                                    accommodation would be provided.
+                                    Shortlisted candidates will be called for interview</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-sm-4 pt-3">
+                <p>
+                    <img src="{% static 'images/career/Day1.jpeg' %}" alt="error" class=" w-100"></span>
+                </p>
+                <p>
+                    <img src="{% static 'images/career/Day3.jpeg' %}" alt="error" class=" w-100"></span>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- main end -->
+
+{% endblock %}

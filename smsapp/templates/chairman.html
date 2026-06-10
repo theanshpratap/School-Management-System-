@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+    div.slide-left {
+        /* width: 100%; */
+        overflow: hidden;
+    }
+
+    div.slide-left p {
+        animation: slide-left 5s;
+    }
+
+    @keyframes slide-left {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Chairman's Message</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);  "><b>CHAIRMAN'S
+                            MESSAGE</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+<!-- chairman's start -->
+<div class="row text-white"style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-9 mx-auto py-5">
+        <div class="row py-5">
+            <div class="col-sm-3  ">
+                <div class="card w3-container w3-center w3-animate-opacity p-0 m-0">
+                    <img src="{% static 'images/about/chairman.jpg' %}" class="card-img-top w-100 p-2" alt="error"
+                        height="auto">
+                </div>
+                <p style="text-align: center;"><span style="font-size: 18px;" class="w3-center w3-animate-opacity"><b><span
+                                style="font-size: 20px; color: #077cea;" >Er. Ajay
+                                Chaudhary</span><br>
+                        </b>Chairman </span><br>
+                    <span style="font-size: 18px;" class="w3-center w3-animate-opacity">Seth Anandram Jaipuria School,
+                        Sadhu Campus –
+                        Barabanki</span>
+                </p>
+            </div>
+            <div class="col-sm-9  px-4 ">
+                <p class="pb-2"><b><span style="font-size: 30px; padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">Dear Students, Parents, and
+                    Well-wishers,</span></b></p>
+                <div class="row slide-left">
+                    
+                    <p style="text-align: justify;"><span style="font-size: 17px;">“In education lies
+                            the key to unlocking the golden door of freedom.” These profound words of Dr. A.P.J.
+                            Abdul Kalam resonate deeply with our mission here at Seth Anandram Jaipuria School. As
+                            the chairman of our esteemed institution, I am honored to lead a community dedicated to
+                            harnessing the transformative power of education.</span></p>
+                    <p style="text-align: justify;"><span style="font-size: 17px; ">We firmly believe
+                            that education is not just about imparting knowledge but also empowering individuals to
+                            shape their destinies and change the world. In recognizing the pressing need for
+                            academic and skill-based learning in our community, we have tailored our curriculum to
+                            focus on practical expertise and hands-on experience.</span></p>
+                    <p style="text-align: justify;"><span style="font-size: 17px; ">Our approach goes
+                            beyond traditional methods of education; we aim to equip our students with the skills
+                            they need to thrive in today’s dynamic and competitive world. In addition, we will
+                            instil values and attitudes for learners to lead with confidence.</span></p>
+                    <p style="text-align: justify;"><span style="font-size: 17px; ">Through a
+                            combination of innovative teaching methods and real-world applications, we nurture the
+                            talents and aspirations of our students. Whether it’s developing academic rigour,
+                            mastering technical skills, honing creative talents, or building critical thinking
+                            abilities, our school provides a supportive environment where every student can
+                            flourish.</span></p>
+                    <p style="text-align: justify;"><span style="font-size: 17px;">As we forge ahead
+                            on this noble path, let us unlock the doors of opportunity and pave the way for a
+                            brighter tomorrow through the power of new-age education.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- chairman's end -->
+
+
+
+
+
+{% endblock %}

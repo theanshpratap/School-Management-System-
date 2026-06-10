@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+
+<style>
+    div.slide-left {
+        /* width: 100%; */
+        overflow: hidden;
+    }
+
+    div.slide-left p {
+        animation: slide-left 5s;
+    }
+
+    @keyframes slide-left {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Addmission</a>
+            </span>
+            <h1><span><span style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>ADDMISSION PROCEDURE</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+
+
+<!-- main start -->
+<div class="row py-5 text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto">
+        <h2 class=" px-2">
+            <span
+                style="font-weight:700; font-size:32px; padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">REGISTRATION
+                PROCEDURE AND RULES</span>
+        </h2>
+        <div class="row py-4 slide-left" style="padding-left: 50px; padding-right: 30px; text-align: justify;">
+
+            <p><i class="fa-solid fa-circle-right"></i>&nbsp;Registration Forms are to be filled in and submitted to
+                the School
+                Office before the end of the
+                Registration period.</p>
+
+            <p><i class="fa-solid fa-circle-right"></i>&nbsp;
+                Incomplete or illegible Registration Forms, without photographs
+                will not be processed / accepted.
+            </p>
+
+            <p><i class="fa-solid fa-circle-right"></i>&nbsp;Dates for test / interviews / interaction will be given
+                at the
+                time
+                of registration. The school
+                authorities reserve the right to change the date and time of the interview.</p>
+
+            <p><i class="fa-solid fa-circle-right"></i>&nbsp;Mere issue of form of registration does not confirm
+                admission
+                which
+                is subject to Admission Test
+                / Interviews / Interaction and also to the availability of seats.</p>
+
+            <p><i class="fa-solid fa-circle-right"></i>&nbsp;Photo copy of Birth Certificate issued by Municipal
+                Corporation or
+                concerned civic authority must
+                accompany the Registration Form for classes Pre-Nursery, Nursery and Prep. Photocopy of
+                report
+                card of the last exam passed must be attached with the Registration Form for Classes I &amp;
+                above.</p>
+
+            <p><i class="fa-solid fa-circle-right"></i>&nbsp;Age of admission to class Pre-nursery is 3+ years and
+                class 1st is 6+ years on 1st April of
+                the academic session in which admission is being sought. Age should be properly specified in
+                the form. Request for relaxation of age criterion will not be entertained.</p>
+
+        </div>
+
+
+        <div class="row">
+            <span style="font-weight:700;font-size:32px; padding-left: 20px;" class="pt-4 ">
+                <h2 style=" padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">ADMISSION PROCEDURE</h2>
+            </span>
+            <span style="padding-left: 50px;" class="py-3 ">
+                <h4><span style="border-bottom: 5px solid rgb(24, 114, 210);">Entrance Assessments/Interviews</span>
+                </h4>
+            </span>
+            <div class="row slide-left " style="padding-left: 100px; padding-right: 30px; text-align: justify;">
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;There will be a written assessment for the students
+                    seeking admission to Class I onwards.</p>
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;Results will be displayed on the Notice Board on
+                    the dates specified.</p>
+            </div>
+            <span style="padding-left: 50px;" class="py-3">
+                <h4><span style="border-bottom: 5px solid rgb(24, 114, 210);">Admission Formalities</span></h4>
+            </span>
+            <div class=" row slide-left" style="padding-left: 100px; text-align: justify; padding-right: 30px;">
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;Successful candidates whose names are included in the
+                    list must pay the fees by the dates
+                    indicated on the list displayed on the School Notice Board; otherwise admission will
+                    automatically stand cancelled.</p>
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;The date of birth of child is required to be supported
+                    by the birth certificate in original
+                    issued by the Municipal Corporation / Local bodies as applicable, along with a certified
+                    photostat copy thereof. An affidavit or any other evidence is not acceptable in support of
+                    birth
+                    certificate. It is to be attached with the Admission Form for Classes Pre-Nursery, Nursery
+                    and
+                    Prep.</p>
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;For Class I &amp; above, Transfer Certificate is to be
+                    attached.</p>
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;For Class V &amp; above, Transfer Certificate must be
+                    countersigned by the concerned State
+                    Education Authority in case of change of state.</p>
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;The admit card will be issued to parents only after the
+                    form is duly filled and the
+                    registration
+                    formalities are completed.</p>
+
+                <p><i class="fa-solid fa-circle-right"></i>&nbsp;Your ward has to report in complete School Uniform,
+                    along with books and stationery as
+                    prescribed
+                    by the school on the very first day.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row my-4">
+        <div class="col-sm-8 mx-auto">
+            <span><button type="button" class="btn btn-success"><a href="https://jaipuriaschoolssadhucampusbbk.com/wp-content/uploads/2024/02/Sadhu-Campus-Admission-Form.pdf"
+                target="_blank" download class="text-decoration-none" style="font-family: Franklin Gothic Medium;">Download Admission Form</a></button></span>
+            <span><button type="button" class="btn btn-warning "><a href="https://jaipuriaschoolssadhucampusbbk.com/wp-content/uploads/2024/02/Sadhu-Campus-Enquiry-Form.pdf"
+                target="_blank" download class="text-decoration-none" style="font-family: Franklin Gothic Medium;">Download Enquiry Form</a></button></span>
+        </div>
+    </div>
+
+</div>
+
+<!-- main end -->
+
+{% endblock %}

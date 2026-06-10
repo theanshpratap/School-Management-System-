@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<style>
+  .bg-img {
+        background:rgba(0,0,0,0.7) url('../static/images/main.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-blend-mode: darken;
+
+    }
+
+    .bg-image {
+        background: url('../static/images/ab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row bg-image">
+    <div class="col-sm-12">
+        <div class="col-sm-10  mx-auto px-3 py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Contact Us</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh; border-bottom: 5px solid rgb(24, 117, 210); color: white;"><b>CONTACT US</b></span></span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- main start -->
+<div class="row  bg-img" >
+
+  <div class="col-sm-10 mx-auto  shadow my-5 border border-1 border-dark " style="background-color: rgb(221, 216, 216); border-radius: 10px;">
+    <div class="row ">
+      {% if msg %}
+      <div class="col-sm-12">
+        <div class="alert alert-success" role="alert">{{msg}}</div>
+      </div>
+      {% endif %}
+      
+      <div class="col-sm-4 border-end boredr-1 border-dark">
+        <form class="row g-3 py-4" method="post">
+          {% csrf_token %}
+          <div class="col-md-11 mx-auto ">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="name">
+          </div>
+          <div class="col-md-11 mx-auto">
+            <label for="gender" class="form-label">Gender</label>
+            <input type="radio" name="gender" value="Male" class="form-check-input">&nbsp;Male
+            <input type="radio" name="gender" value="Female" class="form-check-input">&nbsp;Female
+          </div>
+          <div class="col-md-11 mx-auto">
+            <label for="address" class="form-label">Address</label>
+            <textarea name="address" class="form-control" id="address"></textarea>
+          </div>
+          <div class="col-md-11 mx-auto">
+            <label for="contactno" class="form-label">Contact No</label>
+            <input type="number" name="contactno" class="form-control" id="contactno">
+          </div>
+          <div class="col-md-11 mx-auto">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="emailaddress" class="form-control" id="email">
+          </div>
+          <div class="col-md-11 mx-auto">
+            <label for="enquiry" class="form-label">Enquiry Text</label>
+            <textarea name="enquirytext" class="form-control" id="enquiry"></textarea>
+          </div>
+
+
+          <div class="col-sm-11 mx-auto  ">
+            <button type="submit" class="btn btn-success w-100">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4 ">
+        <div class="row px-4">
+          <h4 class="pt-5">Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt border border-2 border-dark p-2 " style="border-radius: 20px;"></i>&nbsp;&nbsp;<b>Address</b> : Seth Anandram Jaipuria School, Sadhu Campus, Barabanki
+            Village -Jhansapurwa, Post-Madanpur, Tehsil-Fatehpur, Barabanki. Pincode-225305</p>
+            <p><i class="fa-solid fa-phone border border-2 border-dark p-1" style="border-radius: 15px;"></i>&nbsp;&nbsp;<b>Phone</b>: 9044554046, 9044554045</p>
+            <p><i class="fa-regular fa-envelope border border-2 border-dark p-1" style="border-radius: 15px;"></i>&nbsp;&nbsp;admission.sadhucampus@jaipuria.school</p>
+        </div>
+        
+        <div class="row px-4">
+        <h4 class="pt-3">School Operational Timing</h4>
+       <p><i class="fas fa-clock border border-2 border-dark p-1" style="border-radius: 15px;"></i>&nbsp;&nbsp;<b>Summer</b> : 08:00 am – 02:00 pm</p>
+    <p><i class="fas fa-clock border border-2 border-dark p-1" style="border-radius: 15px;"></i>&nbsp;&nbsp;<b>Winters</b> :  09:00 am – 03:00 pm</p>
+  </div>
+      </div>
+      <!--  -->
+      <div class="col-sm-4 border-start border-1 border-dark">
+        <img src="{% static 'images/s.jpg' %}" alt="" class="w-100 h-100">
+      </div>
+      <!--  -->
+      
+    </div>
+
+  </div>
+  
+
+</div>
+<!-- main end -->
+
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+<!-- map start -->
+
+<div class="row">
+
+  <div class="col-sm-12 p-0 m-0 ">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.2536682135155!2d81.17025677890982!3d27.21118448655264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999697c7f31b021%3A0xce219203bdfb1909!2sSeth%20Anandram%20Jaipuria%20School%2C%20Fatehpur!5e0!3m2!1sen!2sin!4v1725945794262!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+</div>
+  
+<!-- map end -->
+
+
+
+
+
+{% endblock %}

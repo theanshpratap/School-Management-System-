@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+
+
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+<!-- About img start -->
+<div class="row text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white ">||&nbsp;Vision & Mission</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 117, 210);"><b>VISION AND MISSION</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- start -->
+<div class="row text-white"style="background-color: rgb(24, 24, 60);" >
+    <div class="col-sm-9 mx-auto ">
+        <div class="row">
+            <div class="col-sm-6 ">
+                <img src="{% static 'images/about/mis.png' %}" alt="" class=" w-100">
+            </div>
+            <div class="col-sm-6  " style="padding-top: 160px;">
+                <h1 style="line-height: 5vh; padding-left:8px; border-left: 5px solid rgb(210, 36, 24);">VISION</h1>
+                <p style="text-align: justify;" class="">We aim to nurture happy and confident children by providing child- centric learning. Our endeavor is to promote creativity, environmental sensitivity and academic excellence. We help inculcate a spirit of lifelong learning for our children to become effective change agents.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row text-white pt-5"style="background-color: rgb(24, 24, 60);">
+<div class="col-sm-9 mx-auto">
+<div class="row ">
+
+    <div class="col-sm-6  py-4">
+        <h2 style="line-height: 5vh; padding-left:8px; border-left: 5px solid rgb(210, 36, 24);">MISSION</h2>
+        <p style="text-align: justify;">We repeatedly strive towards excellence in education by adopting a holistic and dynamic curriculum and providing a safe and nurturing environment to all learners. We recognize the significance of imparting a world class educational experience that prepares children for the future. We are a school that celebrates excellence and espouses traditional Indian values in students. Our prime mission is to ensure that the children are academically proficient, responsive to Indian culture and heritage, and display a scientific temper in an environment of sharing and caring.</p>
+
+    </div>
+    <div class="col-sm-6">
+        <img src="{% static 'images/about/miss.png' %}" alt="" class="w-100">
+    </div>
+</div>
+
+</div>
+</div>
+<!-- end -->
+
+{% endblock %}

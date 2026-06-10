@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+    div.slide-left {
+        /* width: 100%; */
+        overflow: hidden;
+    }
+
+    div.slide-left .sn {
+        animation: slide-left 5s;
+    }
+
+    @keyframes slide-left {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+    #kf{
+        display: flex;
+    }
+
+    div.sliding-text {
+        overflow: hidden;
+    }
+
+    div.sliding-text .spn {
+        animation: slideIn 5s;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Rules</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);"><b>RULES & REGULATIONS</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+ <!-- main start -->
+ <div class="row text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto  pt-5 px-3">
+      <span><h2><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">WITHDRAWAL RULES</b></h2></span>
+        <div class="row sliding-text" id="kf"  style="text-align: justify;">
+            <span class="spn pt-2">
+                <p>A one- month notice period or one- month notice fee is required for withdrawal.</p>
+            <p>Clearance must be obtained from the laboratory and library incharge before applying for
+                withdrawal.</p>
+            <p>Transfer Certificate will be issued after 15 days of the receipt of the application and clearance
+                of all dues.</p>
+            <p>Application for withdrawal is to be made on a prescribed proforma available in the school office.
+                No child is withdrawn till a written request from parents is put up.</p>
+            </span>
+        </div>
+        <div class="row pt-5 slide-left">
+                <span><h2><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">BUS/VAN RULES</b></h2></span>
+            <span class="sn pt-2" style="text-align: justify;">
+                <p>Existing routes will continue to ply. Change in routes and bus / van stops will not be
+                    entertained during the session.</p>
+                <p>Any suggestions or complaints should be reported to the transport incharge. Parents are expected
+                    to treat the bus / van staff kindly.</p>
+                <p>
+                    Request for using the bus / van must be made at the beginning of the session i.e. in the month
+                    of April. No request will be entertained mid-session.</p>
+                <p>
+                    It will be the sole responsibility of the parents to escort the pupil to and from the fixed bus
+                    stops. The bus/van facility is extended at the sole risk and responsibility of the parents</p>
+            </span>
+        </div>
+        <div class="row pt-5 sliding-text" id="kf">
+            <span>
+                <h2><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">RIGHT TO ALTERATION/MODIFICATION</b></h2>
+            </span>
+            <span class="spn pt-2" style="text-align: justify;">
+                <p>Seth Anandram Jaipuria School reserves its right to change the Fee Structure.</p>
+            <p>Management reserves the right to modify, alter and/or include any other terms and conditions that
+                may be deemed fit in the interest of the Institution.</p>
+            </span>
+        </div>
+        <div class="row pt-5 slide-left">
+            <span>
+                <h2><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">MEDICAL FACILITY</b></h2>
+            </span>
+           <span class="sn pt-2" style="text-align: justify;">
+            <p>The school provides facilities of first-aid only.</p>
+            <p>The school has a well equipped dispensary to deal with emergency.</p>
+            <p>The school cannot be held responsible for injury suffered by a child. No reimbursement of charges
+                would be made towards any medical treatment.</p>
+           </span>
+        </div>
+        <div class="row pt-5 sliding-text" id="kf">
+            <span>
+                <h2><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">REGISTRATION PROCEDURE RULES</b></h2>
+            </span>
+            <span class="spn pt-2" style="text-align: justify;">
+                <p>Registration Forms are to be filled in and submitted to the School Office before the end of the
+                    Registration period.</p>
+                <p>
+                    Incomplete or illegible Registration Forms, without photographs will not be processed /
+                    accepted.</p>
+                <p>Dates for test / interviews / interaction will be given at the time of registration. The school
+                    authorities reserve the right to change the date and time of the interview.</p>
+                <p>Mere issue of form or registration does not confirm admission which is subject to Admission Test
+                    / interviews / interaction and also to the availability of seats.</p>
+                <p>Photo copy of Birth Certificate issued by Municipal Corporation or concerned civic authority must
+                    accompany the Registration Form for classes Nursery & LKG, UKG. Photocopy of report card of the
+                    last exam passed must be attached with the Registration Form for Classes I & above.</p>
+                <p> Age of admission to class Pre-nursery is 3+ years and class 1st is 6+ years on 1st April of the
+                    academic session in which admission is being sought. Age should be properly specified in the
+                    form. Request for relaxation of age criterion will not be entertained.</p>
+            </span>
+        </div>
+        <div class="row py-5 slide-left">
+            <span>
+                <h2><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">PROCEDURE FOR FEE PAYMENT</b></h2>
+            </span>
+           <span class="sn pt-2" style="text-align: justify;">
+            <p>At the time of admission, fee is payable by bank draft / pay order only at the school office.</p>
+            <p>Cheque should be drawn in favor of “Seth Anandram Jaipuria School,, Sadhu Campus - Barabanki”.
+            </p>
+            <p>
+                Fee is to be paid in advance for every three months before 10th of the first month. Fee once
+                paid is not refundable, unless specified otherwise.</p>
+            <p>Payment of fee by cheque shall be accepted by our banker upto 10th of the first month of a term
+                in which the payment falls due. Thereafter, payment will be accepted by the school office
+                through cheque only.</p>
+           </span>
+        </div>
+    </div>
+</div>
+<!-- main end -->
+
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">View Subject</h1>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>Subject ID</th>
+                <th>Subject Name</th>
+                <th>Subject Class</th>
+                <th>Book Name</th>
+                <th>Subject Teacher</th>
+                <th>Added Date</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for s in sub %}
+
+            <tr>
+                <td>{{s.sid}}</td>
+                <td>{{s.subject_name}}</td>
+                <td>{{s.sclass}}</td>
+                <td>{{s.book}}</td>
+                <td>{{s.steacher}}</td>
+                <td>{{s.created_date}}</td>
+
+                <td>
+                    
+                    <a href="{% url 'adminapp:editsubject' id=s.sid %}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
+                <td><a href="{% url 'adminapp:delsub' id=s.sid %}" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+
+    </div>
+</div>
+
+
+{% endblock %}

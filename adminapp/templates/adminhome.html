@@ -1,0 +1,118 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<style>
+    .bt{
+     background-color: rgb(78, 106, 219);
+    }
+    .bt .card-body span:hover{
+        color: rgb(252, 135, 135);
+    }
+     .card {
+        box-shadow: 10px 7px 5px rgb(166, 171, 85);
+    }
+</style>
+
+<div class="row py-3">
+    <div class="col-sm-12">
+        <h1 class="text-center" style="font-family: BrowalliaUPC;">Welcome Admin</h1>
+    </div>
+</div>
+
+
+<!-- row 1 start -->
+<div class="row  pt-4">
+    <div class="col-md-3">
+        <div class="card w-100 text-center p-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-user-graduate pe-3"></i>{{stu_count}}</h1>
+                <span style="font-size: 30px;">Total Student</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card w-100 text-center p-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-users-rectangle pe-3"></i>{{teach_count}}</h1>
+               <span style="font-size: 30px;">Total Teacher</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card w-100 text-center p-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-chalkboard-user pe-3"></i>{{cls_count}}</h1>
+               <span style="font-size: 30px;">Classes</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card w-100 text-center p-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-regular fa-circle-question pe-3"></i>{{e_count}}</h1>
+                <span style="font-size: 30px;">Enquiry</span>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- row 1 end -->
+
+<!-- row 2 start -->
+<div class="row  pt-4 ">
+    <div class="col-md-3">
+        <div class="card w-100 text-center py-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-graduation-cap pe-3"></i>{{ps}}</h1>
+                <span style="font-size: 30px;">Present Student</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card w-100 text-center py-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-graduation-cap pe-3"></i>{{abs}}</h1>
+               <span style="font-size: 30px;">Absent Student</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card w-100 text-center p-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-bell pe-3"></i>{{am_count}}</h1>
+               <span style="font-size: 30px;">Notifications</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card w-100 text-center p-4 bt">
+            <div class="card-body">
+                <h1 class="fa-5x"><i class="fa-solid fa-book-open pe-3"></i>{{sb_count}}</h1>
+                <span style="font-size: 30px;">Subjects</span>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- row 2 end -->
+
+
+
+
+
+
+
+{% endblock %}

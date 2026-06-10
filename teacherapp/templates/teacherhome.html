@@ -1,0 +1,97 @@
+{% extends 'teacherbase.html' %}
+{% load static %}
+{% block teacher %}
+
+
+<style>
+    .bttn{
+        background-color: rgb(78, 106, 219);
+    }
+
+    .bttn .card-body span:hover {
+        color: rgb(252, 135, 135);
+    }
+
+    .card {
+        box-shadow: 10px 7px 5px rgb(166, 171, 85);
+    }
+    .card-body span{
+        font-size: 35px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-12 py-4">
+        <h1 style="font-family:BrowalliaUPC; text-align: center;">Welcome Teacher</h1>
+    </div>
+</div>
+
+
+
+<!-- row 1 start -->
+<div class="row  pt-4">
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 bttn">
+            <div class="card-body">
+                <h1 class="fa-4x"><i class="fa-solid fa-address-card pe-2"></i>{{teacher.id}}</h1>
+                <span>Teacher ID</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 bttn">
+            <div class="card-body">
+                <h1 class="fa-4x"><i class="fa-solid fa-user-graduate pe-2"></i>{{st}}</h1>
+                <span>Total Student</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 bttn">
+            <div class="card-body">
+                <h1 class="fa-4x"><i class="fa-solid fa-graduation-cap pe-2"></i>{{At}}</h1>
+                <span>Present Student</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row 1 end -->
+
+
+
+<!-- row 2 start -->
+<div class="row  pt-4">
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 bttn">
+            <div class="card-body">
+                <h1 class="fa-4x"><i class="fa-solid fa-graduation-cap pe-2"></i>{{Ab}}</h1>
+                <span>Absent Student</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 bttn">
+            <div class="card-body">
+                <h1 class="fa-4x"><i class="fa-solid fa-chalkboard-user pe-2"></i>{{teacher.tclass}}</h1>
+                <span>Class Teacher</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 bttn">
+            <div class="card-body">
+                <h1 class="fa-4x"><i class="fa-solid fa-book pe-2"></i>{{sl}}</h1>
+                <span>Total SLM</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row 2 end -->
+
+
+{% endblock %}

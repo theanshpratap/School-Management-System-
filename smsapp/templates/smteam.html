@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+
+
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+<!-- About img start -->
+<div class="row text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10 mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Team</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 117, 210);"><b class="text-uppercase">School Management Team</b></span></span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- About img start -->
+
+
+
+
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- founder's team start -->
+<div class="row py-5 text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-9 mx-auto ">
+        <h1 class="text-center"><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">School Management Team</b></h1>
+        <div class="row  px-3 py-5">
+            <div class="col-sm-3 ">
+                <div class="card w3-animate-left">
+                    <img src="{% static 'images/about/founder1.jpg' %}" class="card-img-top w-100  p-3 " alt="error" height="auto">
+
+                </div>
+                <p class="text-center w3-container w3-center w3-animate-opacity">
+                    <strong><span style="font-size: 20px; color: #52a1ea;">Shri Sadhu Ram Ji</span></strong>
+                    <br>
+                    <span style="font-size: 17px;">Founder</span>
+                </p>
+
+            </div>
+            <div class="col-sm-3 ">
+                <div class="card  w3-animate-left">
+                    <img src="{% static 'images/about/founder2.jpg' %}" class="card-img-top w-100  p-3 " alt="error">
+
+                </div>
+                <p class="text-center w3-container w3-center w3-animate-opacity">
+                    <strong><span style="font-size: 20px; color:#52a1ea;">Smt. Sushmawati Ji</span></strong>
+                    <br>
+                    <span style="font-size: 17px;">Founder</span>
+                </p>
+            </div>
+            <div class="col-sm-3 ">
+                <div class="card w3-animate-right">
+                    <img src="{% static 'images/about/chairman.jpg' %}" class="card-img-top w-100  p-3 " alt="error" height="auto">
+                </div>
+                <p class="w3-container w3-center w3-animate-opacity"><span style=" font-size: 18px;"><b><span
+                                style="font-size: 20px; color: #52a1ea;">Er. Ajay Chaudhary</span><br>
+                        </b>Chairman </span>
+
+                </p>
+
+            </div>
+            <div class="col-sm-3">
+                <div class="card  w3-animate-right">
+                    <img src="{% static 'images/about/director.jpg' %}" class="card-img-top w-100  p-3 " alt="error" height="auto">
+                </div>
+                <p class="w3-container w3-center w3-animate-opacity"><span style=" font-size: 18px;"><b><span
+                    style="font-size: 20px; color: #52a1ea;">Ms.Uma Chaudhary</span><br>
+            </b>Director</span>
+
+    </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- founder's team end -->
+
+
+
+
+
+
+
+{% endblock %}

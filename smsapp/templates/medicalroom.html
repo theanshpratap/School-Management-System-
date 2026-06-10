@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+    div.slide-left {
+            /* width: 100%; */
+            overflow: hidden;
+        }
+
+        div.slide-left p {
+            animation: slide-left 5s;
+        }
+
+        @keyframes slide-left {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Medical</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);"><b>MEDICAL ROOM</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- start -->
+
+<div class="row py-5 text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto px-4">
+        <div class="row slide-left">
+            <span  style="font-weight:700; font-size:28px;"><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">MEDICAL ROOM</b></span>
+        <p style="text-align: justify; font-size: 17px;" class="pt-3 ">We have an experienced doctor and a trained nurse to provide necessary first aid to the students in a time of emergency. An annual health check-up including dental and eye check-ups by specialists is a regular feature along with maintaining a medical record of each and every child. Health advisory on prevention of various illnesses like swine flu, dengue, chickenpox, etc. is also a regular feature.</p>
+        </div>
+    </div>
+   
+</div>
+<div class="row pb-5 text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto px-4 ">
+        <div class="row slide-left">
+            <h3 class="pb-2"><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">Please Note :-</b></h3>
+        <p style="text-align: justify; font-size: 17px;" >Students will be provided first aid only in the school premises in case of medical problem</p>
+        <p style="text-align: justify; font-size: 17px;">In case of chronic diseases, school will only inform the parents telephonically. Parents will be expected to reach school at the earliest.</p>
+        <p style="text-align: justify; font-size: 17px;">Expenses on first aid will be borne by the school. All other expenses in case of hospitalization/ visit to private clinic/ medicine will be borne by the parents</p>
+        </div>
+
+    </div>
+</div>
+<!-- end -->
+
+
+{% endblock %}

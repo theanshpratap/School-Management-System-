@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+    div.slide-up {
+        overflow: hidden;
+    }
+
+    div.slide-up .sp {
+        animation: 4.1s slide-up;
+        margin-top: 0%;
+    }
+
+    @keyframes slide-up {
+        from {
+            margin-top: 100%;
+            height: 300%;
+        }
+
+        to {
+            margin-top: 0%;
+            height: 100%;
+        }
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Transport</a>
+            </span>
+            <h1><span><span style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);"><b>TRANSPORT
+                            FACILITY</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+
+
+<!-- start  -->
+<div class="row text-white " style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto  py-5 px-4">
+        <span style="font-size: 35px;"><b
+                style=" padding-left:8px; border-left: 5px solid rgb(210, 36, 24);">TRANSPORT</b></span>
+        <p style="text-align: justify;"><span style="font-size: 20px;">Students can avail the
+                school transport, subject to the availability of seats. The routes of the school buses are
+                framed keeping in mind the needs of the parents and they should consult the school
+                transport-in-charge for details.</span></p>
+    </div>
+</div>
+<!-- end -->
+
+
+
+
+<!-- strt -->
+<div class="row  py-5 text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto px-4">
+        <P style="font-size: 30px;"><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">Bus Rules</b>
+        </P>
+
+        <div class="row slide-up">
+            <span class="sp">
+                <p style="text-align: justify;">Parents should not try to overtake and stop the school bus to facilitate
+                    the boarding of their wards as this endangers the safety of the bus and its occupants. This act will
+                    lead to strict disciplinary action.</p>
+
+                <p style="text-align: justify;">Parents are requested not to board school buses to see off or receive
+                    their wards.</p>
+
+                <p style="text-align: justify;">Parents should not argue with the teachers present in the bus or the
+                    conductor / driver. If there is any problem, a written communication should be forwarded to the
+                    Administrative Office.</p>
+
+                <p style="text-align: justify;">Under no circumstances are students allowed to go behind or under the
+                    parked buses within the school campus. Students are also not allowed to sit in the parked buses
+                    during school hours.</p>
+
+                <p style="text-align: justify;"> Under no circumstances, should students touch the instrument panel of
+                    the buses.</p>
+
+                <p style="text-align: justify;">A student using the school bus is expected to be at the bus stop at
+                    least ten minutes before the
+                    scheduled arrival of the bus. The student has to be on the correct side of the arriving bus. The
+                    scheduled pick-up time is available with the transport-in-charge at the school. The school reserves
+                    the right to alter the timings, routes and stops as and when necessary </p>
+
+                <p style="text-align: justify;">If a student misses his allotted bus he should not try to board any
+                    other bus. It is the
+                    responsibility of the parents to drop off their wards to the school. However, the student will
+                    return by the allotted bus. </p>
+
+                <p style="text-align: justify;">if any parent whose child is availing school transport service wishes to
+                    take their ward privately in
+                    his/her own transport, he/she has to collect the Permission Slip from the school authorities half an
+                    hour before the end of the last class. </p>
+
+                <p style="text-align: justify;">Students are allowed to use only the allotted bus and bus stop. No
+                    change can be allowed without
+                    prior written permission of the school. </p>
+
+                <p style="text-align: justify;">The buses will not wait for latecomers. </p>
+
+                <p style="text-align: justify;">The school will not be held responsible for any lapse in the bus
+                    services. In case of any
+                    discrepancy, parents may meet the transport-in-charge. </p>
+
+                <p style="text-align: justify;">No student should come near the entry door of the bus until it comes to
+                    a complete halt. The front
+                    door of the bus is the only authorised entrance and exit. </p>
+
+                <p style="text-align: justify;">Students should stay away from the main road until the bus arrives. </p>
+
+                <p style="text-align: justify;">All students must occupy vacant seats immediately after boarding their
+                    respective buses. Reservation
+                    of seats for co-commuters are not allowed under any circumstances. </p>
+
+                <p style="text-align: justify;">
+                    The students must make sure that the aisle of the bus is clear and school bags/other belongings are
+                    placed properly. </p>
+            </span>
+        </div>
+
+
+    </div>
+</div>
+<!-- end -->
+
+
+
+
+
+
+
+
+
+{% endblock %}

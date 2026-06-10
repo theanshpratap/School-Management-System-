@@ -1,0 +1,95 @@
+{% extends 'studentbase.html' %}
+{% load static %}
+{% block student %}
+<style>
+     .buttn{
+        background-color: rgb(78, 106, 219);
+    }
+
+    .buttn .card-body span:hover {
+        color: rgb(252, 135, 135);
+    }
+    .card {
+        box-shadow: 10px 7px 5px rgb(166, 171, 85);
+    }
+    .card-body span{
+        font-size: 35px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-12 py-4">
+        <h1 style="font-family:BrowalliaUPC; text-align: center;">Welcome Student</h1>
+    </div>
+</div>
+
+<!-- row 1 start -->
+<div class="row  pt-4">
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 buttn">
+            <div class="card-body">
+                <h1 class="fa-3x"><i class="fa-regular fa-id-badge pe-2"></i>{{student.rollno}}</h1>
+                <span>Roll No</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 buttn">
+            <div class="card-body">
+                <h1 class="fa-3x"><i class="fa-solid fa-id-card pe-2"></i>{{student.id}}</h1>
+                <span>ID</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 buttn">
+            <div class="card-body">
+                <h1 class="fa-3x"><i class="fa-solid fa-chalkboard-user pe-2"></i>{{student.sclass}}</h1>
+                <span>Class</span>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- row 1 end -->
+
+
+
+<!-- row 2 start -->
+<div class="row  pt-4">
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 buttn">
+            <div class="card-body">
+                <h1 class="fa-3x"><i class="fa-solid fa-book pe-2"></i>{{smt}}</h1>
+                <span>Upload SLM</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 buttn">
+            <div class="card-body">
+                <h1 class="fa-3x"><i class="fa-solid fa-graduation-cap pe-2"></i>{{At}}</h1>
+                <span>Present</span>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card w-100 text-center p-4 buttn">
+            <div class="card-body">
+                <h1 class="fa-3x"><i class="fa-solid fa-graduation-cap pe-2"></i>{{Ab}}</h1>
+                <span>Absent</span>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- row 2 end -->
+
+
+{% endblock %}

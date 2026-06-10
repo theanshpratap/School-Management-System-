@@ -1,0 +1,414 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+    .shd {
+        background-color: rgb(196, 196, 193);
+        box-shadow: 10px 10px 5px rgb(66, 93, 156);
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Facilities</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);"><b class="text-uppercase">Other Facilities</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- main start -->
+
+<div class="row py-5"style="background-color: rgb(23, 23, 50);">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <p class="text-center text-white"><span style="font-size: 50px; font-weight: 700px;"><span style="line-height: 10vh; padding-bottom:5px; border-bottom: 5px solid rgb(210, 36, 24);">Your School Facilities</span></span></p>
+            <div class="col-sm-5">
+                <div class="accordion accordion-flush" id="accordionFlushExample" >
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Computer
+                                    Lab</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">We live in a digital age
+                                    and those who stay abreast of the latest developments in technology have a
+                                    better chance of succeeding in their social and professional lives. Students
+                                    take to technology quite naturally, but what they need is disciplined
+                                    guidance
+                                    to turn their aptitude into a skill or qualification. Our Computer Lab does
+                                    more
+                                    than just introduce students to the fundamentals of computer science.
+                                    Through a
+                                    hands-on approach, we train students in the concepts of coding, web
+                                    browsing,
+                                    and designing. The students get exposure to different kinds of software and
+                                    hardware. Outstanding students in the computer lab also get a chance to
+                                    participate in inter-school contests and competitions.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/clab.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Language
+                                    Lab</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">Language is central to all learning. Students with a better grasp of language often perform better in studies and express themselves clearly and confidently. Our school has a language lab solely dedicated to developing and honing linguistic skills in students. We focus on two languages: Hindi and English. Trained teachers guide students in vocabulary, grammar, correct pronunciation, comprehension, voice modulation and expression. The aim is to build a strong foundation for correct language in students at a young age, because once a language sets in, it becomes difficult to change at a later stage. The language lab has books, dictionaries, audio guides, phonetic instructions to help students get an in-depth understanding of languages.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/Llab.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Robotics
+                                    Lab</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">The Robotics Lab in our school provides a perfect platform for students to mix science, innovation, and engineering creatively to arrive at smart solutions for the future. The lab is equipped with electronic and electrical equipment and tools to help students tinker and experiment under the guidance of an expert teacher. The lab introduces students to the basics of robotics and teaches them the ways of harnessing technology to conceptualize, design, and operate intelligent machines. We particularly adopt an industry-oriented approach to teaching and provide all-around grooming for a career in robotics to those who may be interested. The robotics lab in our school helps develop a scientific temperament in students.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/Rlab.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Music & Dance Room</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">Music has been scientifically proven to calm nerves and infuse positivity in listeners. Our school has a Music and Dance Room exclusively dedicated to teaching different styles and forms of music and dances to students. For the interested students, there are a good variety of musical instruments to choose from, namely the guitar, flute, violin, bongo, keyboards, and drums. A music instructor teaches the fundamentals of both western and Indian music. Dance teachers also train students in different styles, both Indian and western dances.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/MDroom.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Composite Science
+                                    Lab</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">To instill a scientific temperament in students at a young age, we have a Composite Science Lab that is well-equipped with instruments, materials, and instructive models for chemistry, physics, and biology. Whatever students learn in classrooms can be improved upon by practical illustrations, experiments, and observations in the lab. Teachers actively guide students in these practical sessions to sharpen their knowledge and enrich their understanding of different science streams.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/CSlab.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Library</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">Our library is well stocked with books on a whole range of subjects, such as literature, maths, social science, physics, chemistry, biology, geography, civics, economics, home sciences, history, religion, arts, sports, fitness, philosophy, and music. We’ve maintained a balanced stock of books in both English and Hindi languages. All students are issued a library card, which they can use a specified number of times in a month to borrow books from the library to study in the comfort of their homes. All borrowed books must be returned to the library after the end of the lending period.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/Library.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Healthcare & Medical Fitness</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">The school has a sick room or infirmary to attend to any student who may not be feeling well. The infirmary always has a nurse at hand. It is well equipped with basic and necessary medical equipment and medicines to tackle minor illnesses and injuries. We also have the provision of calling in a qualified doctor, if and whenever needed. Students feeling unwell or suffering injuries are immediately looked after by our nurse.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/HMfitness.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Social Science
+                                    Lab</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">To give students a better understanding of the world, its politics, civics, history and geography, we have a Social Science Lab. This lab is equipped with globes, topographical maps, historical maps of various empires and kingdoms, 2D and 3D models of different topographical forms, a projector for screening instructive documentaries, and various books and charts on relevant topics. A social science lab helps to bolster theoretical learning with worldly knowledge. Besides developing a clear view of the world in students, the lab also improves cognitive and cooperative learning.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/SSlab.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseNine" aria-expanded="false"
+                                aria-controls="flush-collapseNine">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Art & Craft Room</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">Creativity sharpens the mind and channelizes the imagination positively. Alongside the academic disciplines, our school helps to groom artistic talents by spotting creativity at a young age and then nurturing it. The Art and Craft Room in our school is the place where creativity takes place in many forms. Under the guidance of trained arts and crafts teachers, students learn to sketch, paint, and craft artworks from paper, cardboard, wood, and other raw material that can be used for purposes of artistic expression. Not just this, we often showcase the best artworks on the school website or annual calendars. The brightest talents are recognized and awarded.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/ACroom.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTen" aria-expanded="false"
+                                aria-controls="flush-collapseTen">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Internal Auditorium/Multipurpose Hall</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">The school has an internal auditorium or multipurpose hall for events, assemblies, plays, performances, school functions, conferences, and get-togethers. Students can use the auditorium for intra-school competitions, contests, debates, festival celebrations, yoga sessions, or performative arts like dance and theatre. The school authority uses the auditorium for press conferences, meetings, annual functions, or similar events.</p>
+                                <div class="card shd">
+                                    <span class="p-2"><img src="{% static 'images/otherF/IAMhall.jpg' %}" class="card-img-top" alt="..."></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEleven" aria-expanded="false"
+                                aria-controls="flush-collapseEleven">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Indoor Games Room</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEleven" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">We live in a digital age
+                                    and those who stay abreast of the latest developments in technology have a
+                                    better chance of succeeding in their social and professional lives. Students
+                                    take to technology quite naturally, but what they need is disciplined
+                                    guidance
+                                    to turn their aptitude into a skill or qualification. Our Computer Lab does
+                                    more
+                                    than just introduce students to the fundamentals of computer science.
+                                    Through a
+                                    hands-on approach, we train students in the concepts of coding, web
+                                    browsing,
+                                    and designing. The students get exposure to different kinds of software and
+                                    hardware. Outstanding students in the computer lab also get a chance to
+                                    participate in inter-school contests and competitions.</p>
+                                    <div class="card shd">
+                                        <span class="p-2"><img src="{% static 'images/otherF/IGroom.jpg' %}" class="card-img-top" alt="..."></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+                                aria-controls="flush-collapseTwelve">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Outdoor Sports</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwelve" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">We live in a digital age
+                                    and those who stay abreast of the latest developments in technology have a
+                                    better chance of succeeding in their social and professional lives. Students
+                                    take to technology quite naturally, but what they need is disciplined
+                                    guidance
+                                    to turn their aptitude into a skill or qualification. Our Computer Lab does
+                                    more
+                                    than just introduce students to the fundamentals of computer science.
+                                    Through a
+                                    hands-on approach, we train students in the concepts of coding, web
+                                    browsing,
+                                    and designing. The students get exposure to different kinds of software and
+                                    hardware. Outstanding students in the computer lab also get a chance to
+                                    participate in inter-school contests and competitions.</p>
+                                    <div class="card shd">
+                                        <span class="p-2"><img src="{% static 'images/otherF/ODsports.jpg' %}" class="card-img-top" alt="..."></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThirteen" aria-expanded="false"
+                                aria-controls="flush-collapseThirteen">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Sports Complex (Indoor Sports)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThirteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                <p style="text-align: justify; font-family: Times New Roman; font-size: 18px;">We live in a digital age
+                                    and those who stay abreast of the latest developments in technology have a
+                                    better chance of succeeding in their social and professional lives. Students
+                                    take to technology quite naturally, but what they need is disciplined
+                                    guidance
+                                    to turn their aptitude into a skill or qualification. Our Computer Lab does
+                                    more
+                                    than just introduce students to the fundamentals of computer science.
+                                    Through a
+                                    hands-on approach, we train students in the concepts of coding, web
+                                    browsing,
+                                    and designing. The students get exposure to different kinds of software and
+                                    hardware. Outstanding students in the computer lab also get a chance to
+                                    participate in inter-school contests and competitions.</p>
+                                    <div class="card shd">
+                                        <span class="p-2"><img src="{% static 'images/otherF/ID.jpg' %}" class="card-img-top" alt="..."></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+                                aria-controls="flush-collapseFourteen">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Canteen Facility</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFourteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                    <div class="card shd">
+                                        <span class="p-2"><img src="{% static 'images/otherF/Canteen.jpg' %}" class="card-img-top" alt="..."></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFifteen" aria-expanded="false"
+                                aria-controls="flush-collapseFifteen">
+                                <span
+                                    style="font-size: 20px; font-weight: 800; font-family: Georgia, serif;">Co-Curricular Activities</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFifteen" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"  style="background-color: lightgrey;">
+                                    <div class="card shd">
+                                        <span class="p-2"><img src="{% static 'images/otherF/Cactivities.jpg' %}" class="card-img-top" alt="..."></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-sm-7 text-white px-3">
+ 
+                <p class="pt-4">
+                <span><img src="{% static 'images/otherF/ac1.jpg' %}" alt="error" class=" h-50 w-50 " style="float: left;">
+                <img src="{% static 'images/otherF/ac2.jpg' %}" alt="error" class=" h-50 w-50"></span>
+              </p>
+          
+                <p>
+                <span><img src="{% static 'images/otherF/ac3.jpg' %}" alt="error" class=" h-50 w-50 " style="float: left;">
+                <img src="{% static 'images/otherF/ac4.jpg' %}" alt="error" class=" h-50 w-50" ></span>
+              </p>
+                <p> 
+                <img src="{% static 'images/otherF/OIP.jpg' %}" alt="error" class=" h-50 w-50 px-1" style="float: left;"></span>
+                <img src="{% static 'images/otherF/P.jpg' %}" alt="error" class=" h-50 w-50 px-1" ></span>
+              </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- main end -->
+
+
+
+{% endblock %}

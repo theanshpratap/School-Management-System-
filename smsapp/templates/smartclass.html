@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+      div.slide-left {
+            /* width: 100%; */
+            overflow: hidden;
+        }
+
+        div.slide-left p {
+            animation: slide-left 5s;
+        }
+
+        @keyframes slide-left {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+        #ct {
+            display: flex;
+        }
+
+        div.sliding-text {
+            overflow: hidden;
+        }
+
+        div.sliding-text p {
+            animation: slideIn 5.1s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+
+        }
+        .shado {
+        box-shadow: 10px 10px 5px rgb(66, 93, 156);
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row  text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Classes</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 111, 210);"><b>SMART CLASSES</b></span></span></h1>
+        </div>
+    </div>
+</div>
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+
+
+<!-- start -->
+
+<div class="row  py-5 text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-5  ">
+                <div class="card shado">
+
+                    <span class="card w3-container w3-center w3-animate-opacity p-0 m-0">
+                        <img src="{% static 'images/smartclass.jpg' %}" alt="error" width="100%" class="p-2">
+                    </span>
+
+                </div>
+            </div>
+            <div class="col-sm-7 px-3 ">
+                <div class="row slide-left">
+                    <p style="text-align: justify;"><span
+                            style="font-size: 17px; font-family: sans-serif;"><strong>The Jaipuria Smart
+                                Class</strong> makes learning fun through the use of digital equipment such as
+                            VCD
+                            or DVD players, laptops and computers attached to a projector.</span></p>
+                    <p style="text-align: justify;"><span
+                            style="font-size: 17px; font-family: sans-serif;">Students
+                            are provided with audio-visual information on various topics pertaining to different
+                            subject areas from the large volume of material available online. This style of
+                            teaching
+                            engages students with the lesson and improves creativity and curiosity to facilitate
+                            better knowledge retention.</span></p>
+                    <p style="text-align: justify;"><span
+                            style="font-size: 17px; font-family: sans-serif;">Mentors
+                            can use online information on different topics from latest educational material
+                            published anywhere in the world and present the information by using PowerPoint
+                            presentations, word documents, audio sessions, video screening, and other
+                            instructional
+                            tools.</span></p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="row pt-5 sliding-text" id="ct">
+            <h2 class="mb-3">
+                <span><b style="padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">ADVANTAGES OF SMART CLASSES</b></span>
+            </h2>
+            <p style="text-align: justify;"><span tyle="font-size: 17px; font-family: sans-serif;">
+                    Anytime access to extensive online information.</span></p>
+
+            <p style="text-align: justify;"><span tyle="font-size: 17px; font-family: sans-serif;">
+                    Interactive environment for better knowledge retention.</span></p>
+
+            <p style="text-align: justify;"><span tyle="font-size: 17px; font-family: sans-serif;">
+                    Education not confined to printed matter.</span></p>
+
+            <p style="text-align: justify;"><span tyle="font-size: 17px; font-family: sans-serif;">
+                    Availability of online notes ensuring better student concentration in class.</span></p>
+
+            <p style="text-align: justify;"><span tyle="font-size: 17px; font-family: sans-serif;">
+                    Use of electronic tools such as digital pens that are easy to maintain.</span></p>
+
+            <p style="text-align: justify;"><span tyle="font-size: 17px; font-family: sans-serif;">
+                    Smart classes offer the perfect solution for teaching students with disparate levels of IQs.
+                    Students who need further illustration of a specific concept already taught in class for
+                    better comprehension can opt for the online resources of a smart class and retain the
+                    knowledge gained for larger periods of time.</span></p>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- end -->
+
+
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+    .bg-image {
+        background: url('../static/images/ab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+
+    #ct {
+        display: flex;
+    }
+
+    .sliding-text {
+        overflow: hidden;
+    }
+
+    .sliding-text span {
+        animation: slideIn 5.1s;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row bg-image">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto px-3 py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Academics</a>
+            </span>
+            <h1><span><span style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 117, 210);"
+                        class="text-uppercase text-white"><b>Academics</b></span></span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+
+
+<!-- academic start -->
+<div class="row text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto my-5">
+        <div class="row ">
+            <div class="col-sm-4  text-center pt-4">
+                <span>
+                    <img src="{% static 'images/academic/acad1.jpg' %}" alt="error" width="100%" height="270"
+                        style="box-shadow: 10px 10px 5px rgb(61, 100, 193);"
+                        class="w3-container w3-center w3-animate-opacity p-0 m-0">
+                </span>
+            </div>
+            <div class="col-sm-8 p-4">
+                <p style="text-align: justify;" class="sliding-text" id="ct">
+                    <span style="font-size: 17px; ">The school applies the pedagogy of ‘Engaging the Learner’ and an
+                        ‘Interdisciplinary Approach’ to enhance the teaching/ learning experience of the youth. The idea
+                        is to move beyond lectures towards the application of engaging activities such as discussions,
+                        videos, quizzes, games, and varied online creative resources for enhancing the learning process.
+                        Technology is integrated into the teaching/learning process, with every classroom being
+                        IT-enabled. An interactive teaching methodology encourages students to be active learners and
+                        promotes conceptual understanding and reflective practices.</span>
+                </p>
+
+                <p style="text-align: justify;" class="sliding-text" id="ct">
+                    <span style="font-size: 17px; ">In the attempt to provide holistic learning, the school facilitates
+                        sessions on Life Skills as well as Intrapersonal and Interpersonal Development. Life Skills are
+                        the skills that one needs to build a happy and successful life. These provide young adolescents
+                        with a set of tools, skills and winning attitudes which can help them to become all that they
+                        are capable of becoming. Special Value Education and Life Skill Sessions by trained counselors
+                        endow the students with value based learning.</span>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto  ">
+        <div class="row ">
+
+            <div class="col-sm-8   p-4 ">
+                <p style="text-align: justify;" class="sliding-text" id="ct">
+                    <span style="font-size: 17px; ">Teachers, the change-makers of tomorrow, are empowered through
+                        regular and constant research in the inviting ambience of the school. Endorsing a learning
+                        society and inquisitive mindset, teachers are entrusted with the responsibility of transforming
+                        the lives of students by listening to their points of view.</span>
+                </p>
+
+                <p style="text-align: justify;" class="sliding-text" id="ct">
+                    <span style="font-size: 17px;">Our teachers are encouraged to reflect, self-appraise and analyze
+                        their own learning styles to empathize with and nurture the development of the same among
+                        students. The cultural shift that teachers at Jaipuria experience – from being told what to do
+                        to innovate and bring in their own uniqueness – gets deciphered into the classroom and fosters
+                        motivation.</span>
+                </p>
+
+                <p style="text-align: justify;" class="sliding-text" id="ct">
+                    <span style="font-size: 17px;">Teachers are no longer only the mentors but equal participants on
+                        stage alongside students. Thus, to ensure sound teaching practices, the candidates are
+                        professionally screened before recruitment and undergo a rigorous procedure for
+                        selection.</span>
+                </p>
+            </div>
+            <div class="col-sm-4  text-center pt-4">
+                <span>
+                    <img src="{% static 'images/academic/acad2.jpg' %}" alt="error" width="100%" height="270"
+                        style="box-shadow: 10px 10px 5px rgb(61, 100, 193);"
+                        class="w3-container w3-center w3-animate-opacity p-0 m-0">
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row " style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto py-5 ">
+        <div class="row ">
+            <div class="col-sm-4 text-center ">
+                <span>
+                    <img src="{% static 'images/academic/acad3.jpg' %}" alt="error" width="100%" height="270"
+                        style="box-shadow: 10px 7px 5px rgb(61, 100, 193); box-sizing: border-box;" class="w3-animate-zoom">
+                </span>
+            </div>
+            <div class="col-sm-4 text-center">
+                <span>
+                    <img src="{% static 'images/academic/acad4.jpg' %}" alt="error" width="100%" height="270"
+                        style="box-shadow: 10px 7px 5px rgb(61, 100, 193); box-sizing: border-box;" class="w3-animate-zoom">
+                </span>
+            </div>
+            <div class="col-sm-4 text-center">
+                <span>
+                    <img src="{% static 'images/academic/acad5.jpg' %}" alt="error" width="100%" height="270"
+                        style="box-shadow: 10px 7px 5px rgb(61, 100, 193); box-sizing: border-box;" class="w3-animate-zoom">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- academic end -->
+
+
+
+{% endblock %}

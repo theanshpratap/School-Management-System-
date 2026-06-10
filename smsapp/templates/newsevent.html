@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+<style>
+    .bg-image {
+        background: url('../static/images/ab.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+    .bg-img {
+        background: rgba(0, 0, 0, 0.7) url('../static/images/newse/main.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        height: 100%;
+    }
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row bg-image">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10  mx-auto px-3 py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;News & Events</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 117, 210); color: white;"><b>NEWS & EVENTS</b></span></span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+
+<!-- news event start -->
+<div class="row px-2 py-5 bg-img">
+    <div class="col-sm-10 mx-auto ">
+
+        <!-- row 1 start -->
+        <div class="row">
+            <div class="col-sm-4 ">
+                <div class="card h-100 border-0 ">
+                    <a href="#"><img src="{% static 'images/newse/evt1.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">3rd Refresher
+                            Training
+                            Certificate Distribute</h4>
+                        <p class="card-text" style="text-align: justify;">Empowering educators, enriching
+                            education!
+                            Teachers of Seth Anandram Jaipuria School, Sadhu Campus, Barabanki, proudly received
+                            certificates for completing the Jaipuria Annual Refresher Training 2024. This
+                            intensive
+                            program equipped them with cutting-edge skills, upskilling and reskilling to stay
+                            ahead
+                            in the ever-evolving educational landscape. Congratulations to our dedicated
+                            teachers on
+                            their commitment to excellence!</p>
+                        <p style=" margin-top: 28px; text-align: right;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card h-100 border-0">
+                    <a href="#"><img src="{% static 'images/newse/evt2.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">Independence Day
+                            Celebration
+                        </h4>
+                        <p class="card-text" style="text-align: justify;">Cheers to saluting the spirit of
+                            freedom! Seth Anandram Jaipuria School, Sadhu Campus Barabanki, celebrated
+                            Independence Day 2024 with patriotic fervor! Our students and staff proudly hoisted
+                            the tricolor, honouring India's 78th year of independence. With cultural
+                            performances, heartfelt speeches, and a tribute to national heroes, we reignited the
+                            flame of freedom and unity. May [...]</p>
+                        <p style="margin-top: 80px; text-align: right;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card h-100 border-0">
+                    <a href="#"><img src="{% static 'images/newse/evt3.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">5th Dr. Rajaram
+                            Jaipuria
+                            Memorial Lecture on “The Rise of India as Vishwa Guru – नया युग नई ऊँचाइयाँ”</h4>
+                        <p class="card-text" style="text-align: justify;">Shri Ram Nath Kovind, Hon'ble 14th
+                            President of India, delivered the 5th Dr. Rajaram Jaipuria Memorial Lecture on “The
+                            Rise of India as Vishwa Guru – नया युग नई ऊँचाइयाँ" on Saturday, August 3, 2024, at
+                            Bharat Mandapam, Pragati Maidan, New Delhi. At the August gathering, he was warmly
+                            welcomed by Shri Shishir Jaipuria, Chairman, [...]</p>
+                        <p class=" text-end" style="margin-top: 40px;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 1 end -->
+
+
+        <!-- row 2 start -->
+        <div class="row  mt-5">
+            <div class="col-sm-4">
+                <div class="card h-100 border-0">
+                    <a href="#"> <img src="{% static 'images/newse/evt4.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">Synopsis of Summer
+                            Camp Activities and Closing Ceremony</h4>
+                        <p class="card-text" style="text-align: justify;">Venue- Seth Anandram Jaipuria School
+                            Sadhu Campus Barabanki Time - 8.00am to 12.00pm Summer Camp Activities: Arts and
+                            Crafts: Students explored their creativity through various projects, including Art
+                            and Craft. These activities helped enhance their artistic skills and provided a
+                            platform for self-expression. Sports and Recreation: A range of sports activities,
+                            such as basketball, Cone [...</p>
+                        <p style="margin-top: 45px; text-align: right;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card h-100 border-0">
+                    <a href="#"><img src="{% static 'images/newse/evt5.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">Watermelon Party for
+                            Pre-Primary wing at Seth Anandram Jaipuria School Sadhu Campus Barabanki</h4>
+                        <p class="card-text" style="text-align: justify;">Seth Anandram jaipuria school Sadhu
+                            Campus barabanki recently held a vibrant and exciting Watermelon Party for its young
+                            learners, aiming to celebrate summer and introduce the children to healthy eating
+                            habits in a fun and engaging way. Event Highlights Welcome and Introduction: The
+                            party began with a warm welcome by the teachers, who introduced the [...]</p>
+                        <p style="text-align: right;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card h-100 border-0">
+                    <a href="#"><img src="{% static 'images/newse/evt6.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">Mother’s Day
+                            Celebration 2024</h4>
+                        <p class="card-text" style="text-align: justify;">In the heart of a bustling school
+                            campus, a special celebration unfolds to honor the remarkable mothers within the
+                            school community. As Mother's Day approaches, students and teachers alike buzz with
+                            excitement, eagerly preparing for the festivities ahead. Classroom walls are adorned
+                            with colorful artwork and heartfelt messages, each one a testament to the love [...]
+                        </p>
+                        <p style="margin-top: 73px; text-align: right;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 2 end -->
+
+        <!-- row 3 start -->
+        <div class="row mt-5  ">
+            <div class="col-sm-4 ">
+                <div class="card h-100 border-0">
+                    <a href="#"> <img src="{% static 'images/newse/evt7.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">Seth Anandram
+                            Jaipuria Group of Schools Receives ET Now Best Education Brands of 2024 Award</h4>
+                        <p class="card-text" style="text-align: justify;">Seth Anandram Jaipuria Group of
+                            Schools has been honoured as one of the ET Now Best Education Brands of 2024, a
+                            prestigious recognition by The Times Group. This remarkable accolade was received
+                            with pride at the felicitation ceremony held in Mumbai, with Dr. Neeta Bali,
+                            Director Schools, representing our esteemed institution. This award is a [...]</p>
+                        <p style="text-align: right; margin-top: 20px;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card h-100 border-0">
+                    <a href="#"><img src="{% static 'images/newse/evt8.jpeg' %}" class="card-img-top  " alt="Error"></a>
+                    <div class="card-body" style="background-color: rgb(214, 230, 214)">
+                        <h4 class="card-title" style="font-family: Open Sans, sans-serif;">7th Jaipuria Annual
+                            School Leadership Conclave</h4>
+                        <p class="card-text" style="text-align: justify;">Day 1 of the 7th Jaipuria Annual
+                            School Leadership Conclave of Seth Anandram Jaipuria Group of Schools in Varanasi,
+                            on January 28, 2024, was a resounding success! With insightful addresses from Chief
+                            Guest Prof. Santanu Kumar Swain, Director Schools – Dr. Neeta Bali, Director IT,
+                            Research, and HR – Mr. Harish Sanduja, and Ms. Tapasi [...]</p>
+                        <p style="margin-top: 73px; text-align: right;">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row 3 end -->
+
+
+    </div>
+</div>
+<!-- news event end -->
+
+
+
+
+{% endblock %}

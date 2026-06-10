@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+    <link rel="stylesheet" href="{% static 'css/adminstyle.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"> -->
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        .tz {
+            font-size: 30px;
+            text-align: center;
+            font-weight: bolder;
+            background-color: aquamarine;
+            color: black;
+            padding: 5px;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .nb li a {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 600;
+        }
+
+        .nb li a i {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo text-center p-0 ">   
+                    <p class="m-0"> <img src="{% static 'images/teacher.png' %}" alt="" style="height: 110px;"></p>
+                    <p class="tz">Teacher Zone</p>
+                </div>
+                <hr class="text-white">
+                <ul class="sidebar-nav nb">
+                    <li class="sidebar-header text-decoration-none">
+                        Teacher Elements
+                    </li>
+                    <hr class="text-white">
+                    <li class="sidebar-item">
+                        <a href="{% url 'teacherapp:teacherhome' %}" class="sidebar-link text-decoration-none">
+                            <i class="fa-solid fa-chart-line pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <hr class="text-white">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed text-decoration-none" data-bs-target="#pages"
+                            data-bs-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-list pe-2"></i>
+                            Manage Attendance
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="{% url 'teacherapp:addattend' %}" class="sidebar-link text-decoration-none">Add
+                                    Attendance</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{% url 'teacherapp:viewattend' %}"
+                                    class="sidebar-link text-decoration-none">View Attendance</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <hr class="text-white">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed text-decoration-none" data-bs-target="#auth"
+                            data-bs-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-book pe-2"></i>
+                            SLM Management
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="{% url 'teacherapp:addslm' %}" class="sidebar-link text-decoration-none">Add
+                                    SLM</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{% url 'teacherapp:viewslm' %}" class="sidebar-link text-decoration-none">View
+                                    SLM</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <hr class="text-white">
+                    <li class="sidebar-item">
+                        <a href="{% url 'teacherapp:teacherprofile' %}" class="sidebar-link text-decoration-none">
+                            <i class="fa-regular fa-address-card pe-2"></i>
+                            Update Profile
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="sidebar-item">
+                        <a href="{% url 'teacherapp:tchangepass' %}" class="sidebar-link text-decoration-none">
+                            <i class="fa-solid fa-lock pe-2"></i>
+                            Change Password
+                        </a>
+                    </li>
+                    <hr class="text-white">
+                    <li class="sidebar-item text-center">
+                        <a href="{% url 'teacherapp:teacherlogout' %}" class="sidebar-link text-decoration-none">
+                            <i class="fa-solid fa-right-from-bracket pe-2"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav nb">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
+                                <span class="me-2 text-success">{{teacher.name}}</span>
+                                <i class="fa-solid fa-circle-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="{% url 'teacherapp:teacherprofile' %}" class="dropdown-item"><i
+                                        class="fa-regular fa-circle-user pe-2"></i>Profile</a>
+                                <a href="{% url 'teacherapp:tchangepass' %}" class="dropdown-item">
+                                    <i class="fa-solid fa-lock pe-2"></i>
+                                    Change Pass
+                                </a>
+                                <a href="{% url 'teacherapp:teacherlogout' %}" class="dropdown-item"><i
+                                        class="fa-solid fa-right-from-bracket pe-2"></i>Logout</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    {% block teacher %}
+
+
+                    {% endblock %}
+                </div>
+            </main>
+            <a href="#" class="theme-toggle">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-regular fa-sun"></i>
+            </a>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-12 text-end">
+                            <!-- <p class="mb-0">
+                                <a href="#" class="text-muted ">
+                                    <strong>&copy; Ansh Pratap 2024</strong>
+                                </a>
+                            </p> -->
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="{% static 'js/adminjs.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<style>
+    .bg-imge {
+        background: rgba(0, 0, 0, 0.7) url('../static/images/main.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        height: 1000px;
+    }
+
+    .image {
+        background: url('../static/images/aply.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+
+    .new {
+        position: fixed;
+        top: 194px;
+        right: 0px;
+        transform: rotate(360deg);
+        border: 1px solid #0d6efd;
+        background-color: #0d6efd;
+        padding: 1px;
+
+
+    }
+
+    .nw {
+        position: fixed;
+        top: 235px;
+        right: 0px;
+        transform: rotate(360deg);
+        border: 1px solid #dc3545;
+        background-color: #dc3545;
+
+    }
+
+    .n {
+        position: fixed;
+        top: 274px;
+        right: 0px;
+        transform: rotate(360deg);
+
+        border: 1px solid #833ab4;
+        background-color: #833ab4;
+
+        padding: 2px;
+
+    }
+    .tt{
+        text-decoration: none;
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .zoom-in div{
+        overflow: hidden;
+    }
+    .zoom-in img{
+        transition: 0.5s ease;
+    }
+    .zoom-in:hover img{
+      transform: scale(0.7);
+    }
+</style>
+
+<!-- slider start -->
+<div class="row ">
+    <div class="col-sm-12 p-0 m-0 ">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <img src="{% static 'images/slider/s1.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider/s2.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider/s3.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider/s4.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- know start -->
+<div class="row  bg-danger" >
+    <div class="col-sm-10 mx-auto p-2 ">
+        <h5 class="text-center fw-bold"> TO KNOW ADMISSION PROCESS, CALL – 9044554046, 9044554045 </h5>
+    </div>
+</div>
+<!-- know end -->
+<!-- slider end -->
+
+<!-- notification  start -->
+<div class="row " >
+    <div class="col-md-12 ">
+        <div class="row">
+            <div class="col-md-2 bg-warning py-2 text-center">
+                <h2 >Notification <span><i class="fa-solid fa-caret-right"></i></span></h2>
+            </div>
+            <div class="col-md-10 pt-3  ">
+                <marquee behavior="" direction="">
+                    
+                    {% for n in noti %}
+
+                    <span><img src="{% static 'images/new.gif' %}" alt="" height="35px;"><a href="{{n.doc.url}}" target="_blank" class="tt">{{n.text}}</a></span>
+
+                    {% endfor %}
+                </marquee>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--notification  end -->
+
+
+
+<!-- start -->
+<div class="row text-white pt-4" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <h1 class="text-center"><b style="line-height: 6vh; padding-bottom:5px; border-bottom: 5px solid rgb(210, 36, 24); font-family: BrowalliaUPC;">Welcome to Seth Anandram Jaipuria School, Sadhu Campus - Barabanki</b></h1>
+        </div>
+    </div>
+</div>
+<!-- end -->
+
+<!-- card 1 end  -->
+<div class="row text-white"style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10  mx-auto">
+        <div class="row pt-5">
+            <div class="col-sm-6 ">
+                <iframe width="100%" height="340" src="https://www.youtube.com/embed/M1156iKJgNo?si=bbMAedRKjiyx1k2Q"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p style="text-align: justify;" class="p-2">We, at <b>Seth Anandram Jaipuria School, Sadhu Campus -
+                        Barabanki</b>, are committed to our motto <b>‘Empower, Enthuse and Excel’</b> in providing
+                    quality education and teaching every child the necessary values to guide him/her through the journey
+                    of life. The school endows education for LIFE! Our prime mission is to create opportunities through
+                    a stimulating, safe, collaborative, and supportive environment that help student in attaining
+                    personal mastery, team spirit, and academic excellence. </p>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="card shadow">
+                    <img src="{% static 'images/card.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <a href="#" style="text-decoration: none; font-size: 20px;">3rd Refresher Training
+                                Certificate Distribute</a>
+                        </p>
+                        <div>
+                            <span>...</span>
+                        </div>
+                        <div>
+                            <a href="#" class="btn p-0 border-0">READ MORE</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<!-- card 1 start -->
+
+<!-- card 2 start -->
+<div class="row" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-3">
+            <div class="col-sm-6">
+                <div class="card border-0 h-100 zoom-in">
+                    <img src="{% static 'images/pri-primary.png' %}" class="card-img-top" alt="loading img error">
+                    <div class="card-body ">
+                        <h5 class="card-title" style="font-family:Roboto Slab; font-style:normal; font-weight:700;">
+                            <span
+                                style="line-height: 5vh; padding-bottom:5px; border-bottom: 3px solid rgb(35, 43, 51);">PRE-</span>PRIMARY
+                            & PRIMARY SCHOOL
+                        </h5>
+
+                        <p class="card-text py-2" style="text-align: justify;">The goal of education is not to increase
+                            the amount of knowledge but to create the possibilities for a child to invent and discover,
+                            to create individuals who are capable of doing</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="card border-0 h-100 zoom-in">
+                    <img src="{% static 'images/midleclass.png' %}" class="card-img-top" alt="loading img error">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family:Roboto Slab; font-style:normal; font-weight:700;">
+                            <span
+                                style="line-height: 5vh; padding-bottom:5px; border-bottom: 3px solid rgb(35, 43, 51);">MID</span>DLE
+                            SCHOOL
+                        </h5>
+
+                        <p class="card-text py-2" style="text-align: justify;">Student-centered teaching strategies
+                            focus instruction on the needs, preferences, and interests of the learner. Teachers act as
+                            facilitators of the learning process.</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- card 2 end -->
+<!-- unique feature start -->
+<div class="row bg-imge ">
+    <div class="col-sm-8 mx-auto m-0 ">
+        <h1 class="text-white text-center "
+            style="margin-top: 150px; font-family:Roboto Slab; font-weight:700; font-style:normal; ">UNIQUE FEATURES
+        </h1>
+        <h6 class="text-white text-center">Seth Anandram Jaipuria School, Sadhu Campus – Barabanki</h6>
+        <div class="row  " style="margin-top: 100px;">
+
+            <div class="col-sm-8 text-white pt-3 ">
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Multipurpose Playground </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> RJ Studio </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Computer Lab </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Art & Craft room </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Composite Science Lab </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Music Room </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Dance Room </span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Well Stocked Library</span>
+                </p>
+
+            </div>
+            <div class="col-sm-4 text-white  pt-3">
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Monitored Surveillance & Security</span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> GPS tracked School buses</span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Outdoor Kids Play Zone</span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> School Infirmary</span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Kids Activity Room</span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span> Badminton Court</span>
+                </p>
+                <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    <span>Upcoming facilities: Basketball Arena*</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- unique feature end -->
+
+<!-- add start -->
+
+<div class="row image">
+    <div class="col-sm-10 mx-auto">
+        <div class="row pt-5">
+            <div class="col-sm-4 " style="line-height: 5vh;  border-left: 10px solid rgb(233, 42, 9); color: white;">
+                <h3>
+                    <span><b>ADDMISSION OPEN 2024-25</b></span>
+                </h3>
+                <h6>Seth Anandram Jaipuria School,Sadhu Campus, Barabanki</h6>
+
+            </div>
+            <div class="col-sm-7 text-end">
+                <a href="{% url 'addmission' %}"><button type="button" class="btn btn-success p-3">APPLY NOW</button></a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- add end -->
+
+
+
+<!-- modal icons start -->
+
+<div class="new">
+    <a href="https://www.facebook.com/jaipuriaschoolsadhucampus"> <button class="btn text-white" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fa-brands fa-facebook "></i></button> </a>
+</div>
+<div class="nw">
+    <a href="https://www.youtube.com/channel/UCVZPQh0BHms68D2HpOFdlhg"> <button class="btn text-white "
+            data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-brands fa-youtube "></i></button> </a>
+</div>
+<div class="n">
+    <a href="https://www.instagram.com/jaipuriaschoolsadhucampus"> <button class="btn text-white" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fa-brands fa-instagram "></i></button> </a>
+</div>
+
+<!-- modal icons end -->
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'studentbase.html' %}
+{% load static %}
+{% block student %}
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center pb-3">STUDENT STUDY MATERIAL</h1>
+        <table class="table table-bordered text-center w-75 mx-auto">
+            <tr>
+                <th>S. No</th>
+                <th>Title</th>
+                <th>View</th>
+                <th>Download</th>
+            </tr>
+            {% for s in slm %}
+            <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{s.title}}</td>
+            <td>
+                <a href="{{s.sm.url}}" target="_blank" class="btn btn-warning"><i class="fa-solid fa-eye"></i></a>
+            </td>
+            <td>
+                <a href="{{s.sm.url}}" download class="btn btn-danger"><i class="fa-solid fa-file-arrow-down"></i></a>
+            </td>
+            
+        </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock %}

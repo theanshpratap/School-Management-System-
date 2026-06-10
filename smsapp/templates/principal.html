@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<style>
+div.slide-left {
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+div.slide-left p {
+    animation: slide-left 5s;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+</style>
+
+<!-- red line start -->
+<div class="row p-1" style="background: linear-gradient(to right, rgba(34, 6, 172), rgba(191, 194, 7))"></div>
+<!-- red line end -->
+
+
+<!-- About img start -->
+<div class="row text-center" style="background: linear-gradient(to right, #f44242, rgb(68, 118, 245))">
+    <div class="col-sm-12 ">
+        <div class="col-sm-10 mx-auto py-5">
+            <span>
+                <a href="{% url 'index' %}" class="text-decoration-none ">HOME</a>
+                <a href="#" class="text-decoration-none text-white">||&nbsp;Principal's Message</a>
+            </span>
+            <h1><span><span
+                        style="line-height: 6vh;  border-bottom: 5px solid rgb(24, 117, 210);"><b>PRINCIPAL'S MESSAGE</b></span></span></h1>
+        </div>
+    </div>
+</div>
+
+<!-- About img start -->
+
+<!-- red line start -->
+<div class="row bg-secondary p-1"></div>
+<!-- red line end -->
+
+
+<!-- principal's start -->
+<div class="row text-white" style="background-color: rgb(24, 24, 60);">
+    <div class="col-sm-9 mx-auto  py-5">
+        <div class="row py-5">
+            <div class="col-sm-3">
+                <div class="card m-0 p-0 w3-container w3-center w3-animate-opacity">
+                    <img src="{% static 'images/about/principle.jpg' %}" class="card-img-top w-100 p-2" alt="error" height="auto">
+                </div>
+                <h2 style="text-align: center; color:  #077cea; font-weight: 600;" class="w3-center w3-animate-opacity">Ms. KAMLA PAL</h2>
+                <p style="text-align: center;" class="w3-center w3-animate-opacity">
+                    <b style="color: grey;">Principal, Seth Anandram Jaipuria School<br>
+                    Sadhu Campus,Barabanki</b>
+                </p>
+                        
+                </p>
+            </div>
+            <div class="col-sm-9  px-4">
+                <p><b><span style="font-size: 30px; padding-left:5px; border-left: 5px solid rgb(210, 36, 24);">Dear Students, Parents, and
+                    Well-wishers,</span></b></p>
+                <div class="row slide-left">
+                    <p style="text-align: justify;"><span style="font-size: 17px;">As you explore our offerings, you’ll discover answers to your initial inquiries about our school, academic programs, and student life. Serving as the Principal, I am honored to be part of an educational institution where every stakeholder is a learner, and each day presents an opportunity for discovery. We view ourselves as a community of learners, where teachers, parents, and staff are actively engaged in the learning process.</span></p>
+
+                <p style="text-align: justify;"><span style="font-size: 17px;">Maintaining high standards, I am committed to understanding and enhancing the educational process. We employ a dual strategy approach—Love and Logic—to create a positive learning environment. Love fosters trusting relationships, ensuring students feel respected and valued, while Logic instills personal responsibility, self-control, decision-making skills, self-confidence, and character-building with high moral values.</span></p>
+
+                <p style="text-align: justify;"><span style="font-size: 17px;">Your child’s learning journey is a collaborative effort between home and school. We believe that a strong partnership enhances your child’s overall experience. Learning is inherently social, and I eagerly anticipate working with you to create a school where parents are always welcome, students engage in meaningful learning, and staff members are valued for their contributions.</span></p>
+
+                <p style="text-align: justify;"><span style="font-size: 17px;">Together, we aim to uphold a standard of excellence, promote a positive learning atmosphere, and foster an environment where everyone can thrive. I look forward to the collective efforts of our entire community as we embark on this educational journey together.</span></p>
+                </div>
+
+            
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- principal's end -->
+
+
+
+{% endblock %}

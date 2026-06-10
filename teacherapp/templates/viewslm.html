@@ -1,0 +1,44 @@
+{% extends 'teacherbase.html' %}
+{% load static %}
+{% block teacher %}
+
+<div class="row">
+    <div class="col-sm-12 py-4">
+        <h1 class="text-center">View Study Material</h1>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>S. No</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Upload file</th>
+                <th>View</th>
+                <th>Download</th>
+            
+
+            </tr>
+            {% for s in slm %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{s.title}}</td>
+                <td>{{s.created_date}}</td>
+                <td>{{s.sm}}</td>
+                <td>
+                    <a href="{{s.sm.url}}" target="_blank" class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
+                    
+                </td>
+                <td>
+                    <a href="{{s.sm.url}}" download class="btn btn-warning"><i class="fa-solid fa-file-arrow-down"></i></a>
+                </td>
+               
+            </tr>
+
+
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
